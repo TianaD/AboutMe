@@ -6,21 +6,177 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AboutMe</title>
 </head>
+
+
 <body>
-    <h1>
+
+    <style>
+
+        /* .heading {
+            justify-content: center;
+        } */
+
+    </style>
+
+    <h1 class="heading" id="name">
         Tiana Davis
     </h1>
 
-    <article>
-        Software Engineer with exceptional performance in full software development lifecycle and upgrades. Working closely with clients to establish problem specifications and system designs. Manages design effort and guides installation process for on-schedule product launches. Demonstrates high aptitude, dedicated to growth in the technology field, and motivated to channel creativity. In addition to software development, I have interests in fashion, personal development, and sociology.
-    </article>
+    <div>
+
+        <article>
+            Software Engineer with exceptional performance in full software development lifecycle and upgrades. Working closely with clients to establish problem specifications and system designs. Manages design effort and guides installation process for on-schedule product launches. Demonstrates high aptitude, dedicated to growth in the technology field, and motivated to channel creativity. In addition to software development, I have interests in fashion, personal development, and sociology.
+        </article>
+
+        &nbsp;
+
+        &nbsp;
+
+        <h2>
+            Education
+        </h2>
+
+        &nbsp;
+
+        &nbsp;
+
+        <article>
+            Tiana graduated from Olive Branch High School. And studied Architecture for three years at the University of Memphis.
+        </article>
+
+        &nbsp;
+
+        &nbsp;
+
+        <article>
+            Let's talk about food. Honestly, if Tiana did not have to eat though, she wouldn't hate that. But since she do eat, she choose to enjoy food. Japanese is her favorite cuisine. 
+        </article>
+
+        &nbsp;
+
+        &nbsp;
+
+        <h2>
+            A little more about Tiana:
+        </h2>
+
+        <article>
+            Tiana is not afraid of color. She gravitate towards pastels, neutrals, and pink as it is her favorite color.
+        </article>
+
+    </div>
+
+    <button type="quiz" class="take a quiz" onclick="Quiz()">Take Quiz</button>
     
-    <article>
-        I graduated from Olive Branch High School. And studied Architecture for three years.
-    </article>
-
-    <article>
-
-    </article>
 </body>
+
+<script>
+
+    // Creating variables to enter into alert functions
+
+
+    let education = "";
+    let upbringing = "";
+    let interests = "";
+    let food = "";
+    let color = "";
+
+    // Creating function to make quiz questions and answers work
+    // I need a capitalization function.
+    function Quiz() {
+        education = prompt ("Based on this arcticle, did Tiana get her education at Southaven Schools?")
+            if (education != "" || education === "no" || education === "n" || education === "No" || education === "N" || education === "NO") {
+                alert('That is Correct!');
+            } else {
+                alert('That is incorrect.');
+            }
+        upbringing = prompt ("Where does Tiana live?")
+            if (upbringing != "" || upbringing === "Southaven" || upbringing === "southaven") {
+                alert('That is Correct!');
+            } else {
+                alert('That is incorrect.');
+            }
+        interests = prompt ("Name one interest of Tiana's.")
+            if (interests != "" || interests === "fashion" || interests === "personal development" || interests === "sociology" || interests === "design") {
+                alert('That is Correct!');
+            } else {
+                alert('That is incorrect.');
+            }
+        food = prompt ("What is Tiana's favorite cuisine?")
+            if (food != "" || food === "japanese" || food === "Japanese") {
+                alert('That is Correct!');
+            } else {
+                alert('That is incorrect.');
+            }
+        color = prompt ("True or False: Blue is Tiana's favorite color?")
+            if (color != "" || color === "" || color === "False" || color === "f" || color === "false" || color === "F") {
+                alert('That is Correct!');
+            } else {
+                alert('That is incorrect.');
+            }
+    }
+
+    education();
+    upbringing();
+    interests();
+    food();
+    color ();
+
+// a score system is needed
+
+</script>
+
 </html>
+
+
+<!-- array definition: location of where a group of data is kept so i can get information and use it how i want -->
+
+<!-- console.log 
+log is everything that is going on on the webiste. it is logged. the console is where we go to see it in inspect-->
+
+
+
+
+
+
+
+<!-- example in class -->
+
+<script>
+let answers = ["arr1/answr1", "arr2/answr2", "arr2/answr3", "arr4/answr4"];
+
+let ua = [];//prompt("question");
+
+for(let i = 0; i < 6; i++){
+    ua.push(prompt("question"));
+}
+
+console.log(ua); // console.log is used for testing, to show results based on user input -- it's behind the scenes work
+
+for (let i = 0; i < ua.length; i++) {
+    for (let j = 0; j < answers.length; j++) {
+        if (ua[i] == answers[j]) {
+            correct = true;
+            //create break so loop stops when the correct answer is given
+            break;
+        } else if (ua[i] != answers[j]) {
+            correct = false;
+        }
+    }
+
+    if (correct) {
+        alert(ua[i] + "was correct");
+        // break;
+    } else {
+        alert(ua[i] = "was not correct");
+        
+    }
+}
+
+
+
+
+
+</script>
+
+
