@@ -85,13 +85,13 @@
     // I need a capitalization function.
     function Quiz() {
         education = prompt ("Based on this arcticle, did Tiana get her education at Southaven Schools?")
-            if (education != "" || education === "no" || education === "n" || education === "No" || education === "N" || education === "NO") {
+            if (education === "no" || education === "n" || education === "No" || education === "N" || education === "NO") {
                 alert('That is Correct!');
             } else {
                 alert('That is incorrect.');
             }
         upbringing = prompt ("Where does Tiana live?")
-            if (upbringing != "" || upbringing === "Southaven" || upbringing === "southaven") {
+            if (upbringing === "Southaven" || upbringing === "southaven") {
                 alert('That is Correct!');
             } else {
                 alert('That is incorrect.');
@@ -103,24 +103,24 @@
                 alert('That is incorrect.');
             }
         food = prompt ("What is Tiana's favorite cuisine?")
-            if (food != "" || food === "japanese" || food === "Japanese") {
+            if (food === "japanese" || food === "Japanese") {
                 alert('That is Correct!');
             } else {
                 alert('That is incorrect.');
             }
         color = prompt ("True or False: Blue is Tiana's favorite color?")
-            if (color != "" || color === "" || color === "False" || color === "f" || color === "false" || color === "F") {
+            if (color === "" || color === "False" || color === "f" || color === "false" || color === "F") {
                 alert('That is Correct!');
             } else {
                 alert('That is incorrect.');
             }
     }
 
-    education();
-    upbringing();
-    interests();
-    food();
-    color ();
+    // education();
+    // upbringing();
+    // interests();
+    // food();
+    // color ();
 
 // a score system is needed
 
