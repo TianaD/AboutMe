@@ -1,1 +1,1 @@
-# AboutMe
+Chyniece: I created a function that allows the user to input their name and receive a welcome prompt. 
