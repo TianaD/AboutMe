@@ -83,37 +83,45 @@
 
     // Creating function to make quiz questions and answers work
     // I need a capitalization function.
+    let score = 0;
     function Quiz() {
         education = prompt ("Based on this arcticle, did Tiana get her education at Southaven Schools?")
             if (education === "no" || education === "n" || education === "No" || education === "N" || education === "NO") {
                 alert('That is Correct!');
+                score++;
             } else {
                 alert('That is incorrect.');
             }
         upbringing = prompt ("Where does Tiana live?")
             if (upbringing === "Southaven" || upbringing === "southaven") {
                 alert('That is Correct!');
+                score++;
             } else {
                 alert('That is incorrect.');
             }
         interests = prompt ("Name one interest of Tiana's.")
             if (interests != "" || interests === "fashion" || interests === "personal development" || interests === "sociology" || interests === "design") {
                 alert('That is Correct!');
+                score++;
             } else {
                 alert('That is incorrect.');
             }
         food = prompt ("What is Tiana's favorite cuisine?")
             if (food === "japanese" || food === "Japanese") {
                 alert('That is Correct!');
+                score++;
             } else {
                 alert('That is incorrect.');
             }
         color = prompt ("True or False: Blue is Tiana's favorite color?")
-            if (color === "" || color === "False" || color === "f" || color === "false" || color === "F") {
+            if (color === "False" || color === "f" || color === "false" || color === "F") {
                 alert('That is Correct!');
+                score++;
             } else {
                 alert('That is incorrect.');
             }
+
+        alert("Your score: " + score + "/5.");
     }
 
     // education();
@@ -132,7 +140,7 @@
 <!-- array definition: location of where a group of data is kept so i can get information and use it how i want -->
 
 <!-- console.log 
-log is everything that is going on on the webiste. it is logged. the console is where we go to see it in inspect-->
+log is everything that is going on on the website. it is logged. the console is where we go to see it in inspect-->
 
 
 
