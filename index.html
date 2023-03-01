@@ -67,7 +67,60 @@
     </div>
 
     <button type="quiz" class="take a quiz" onclick="Quiz()">Take Quiz</button>
-    
+
+    <!-- As a user, I would like to view a series of data related to the site owners interest so that the I can quickly view more information about them. -->
+
+<!-- Create a “Top Ten” at the bottom of your HTML page as an ordered list in HTML. 
+Some ideas that you can include could be top ten movies, top ten favorite places, or top ten places to visit. 
+You may choose to do whatever top ten list that you wish. -->
+<h2>
+Top Ten Things to do This Year:
+</h2>
+
+<ol>
+    <li>BASE Jump</li>
+    <li>See Shen Yun Live</li>
+    <li>Get a Massage</li>
+    <li>Make Some Tea and Feel Good about It</li>
+    <li>Write a Song or Two</li>
+    <li>Go Blond</li>
+    <li>Take a Walk</li>
+    <li>Get One More Massage</li>
+    <li>Stay Hydrated</li>
+    <li>Visit the Nashville, TN</li>
+</ol>
+
+<!-- Convert your work experience and education summary into an unordered list using HTML -->
+
+<h3>EDUCATION </h3>
+
+    <article>
+
+    <ul>
+        <li>CodeCrew, Certification: Software Engineering, 2023</li>
+        <li>MedCerts, Certification: CompTIA A+, CompTIA Network+,  2022</li>
+        <li>Pathstream, Certification: Google IT Support, 2022</li>
+        <li>Tech901, Certification: Software and Web Development, 2021</li>
+    </ul>
+
+    </article>
+
+&nbsp;
+
+<h3>EXPERIENCE</h3>
+
+
+<article>
+
+    <ul>
+        <li>Front-End Web Developer</li>
+        <li>Website Manager</li>
+        <li>Kitchen Manager</li>
+        <li>Independent Study: Software and Web Development</li>
+    </ul>
+
+</article>
+
 </body>
 
 <script>
@@ -80,6 +133,7 @@
     let interests = "";
     let food = "";
     let color = "";
+
 
     // Creating function to make quiz questions and answers work
     // I need a capitalization function.
@@ -120,9 +174,14 @@
             } else {
                 alert('That is incorrect.');
             }
-
+        // guessnum = button type = 
         alert("Your score: " + score + "/5.");
+
     }
+    // resetButton.addEventListener("click", resetGame);
+
+    //loop currently does not reset scores after quiz is taken
+
 
     // education();
     // upbringing();
@@ -130,7 +189,77 @@
     // food();
     // color ();
 
-// a score system is needed
+// a score system is needed -- done
+
+
+//     As a user, I would like to be guided to an answer through a series of feedback responses so that I can learn more about the site owner.
+// Add a 6th question to the guessing game that takes in a numeric input by prompting the user to guess a number.
+// Indicates through an alert if the guess is “too high” or “too low”.
+// It should give the user exactly four opportunities to get the correct answer.
+// After all attempts have been exhausted, tell the user the correct answer. Consider using a loop of some sort.
+
+let guessnum = Math.floor(Math.random() * 30) + 1; //guessnum is assigned a number within the range: 1 and 30 via this math algorithm
+
+//const store reference to result parameters in HTML and uses them to insert values later use in the code
+const input = document.querySelector(".input");
+const lastInput = document.querySelector(".lastInput");
+const lowHi = document.querySelector(".lowHi");
+
+
+// const store references to the form text and input and submit button and control submitting the guess
+const guessSubmit = document.querySelector(".guessSubmit");
+const guessField = document.querySelector(".guessField");
+
+//variables store input count of one and reference to start over button
+let trials = 0; //set count equal to one
+let startOver;
+
+function checkInput() {
+    const userGuess = Number(guessField.value); //declare var & sets the val to current val inside txt field, run it thru Num to make sure its a num
+    if (trials === 1) { 
+        input.textContent = "Previous guesses: ";
+    }
+    input.textContent += `${userGuess} `;
+    console.log(userGuess);
+
+    if (userGuess === guessnum) {  //checks if user guess is = to random num if yes they win
+        lastInput.textContent = "Yay, you guessed correct!";
+
+        lowHi.textContent = "";
+        setGameOver();
+    } else if (trials === 6) { // checks if this is users last turn 
+        lastInput.textContent = "Whomp Whomp Whomp, you lost."; //if so, they lost
+        lowHi.textContent = "";
+        setGameOver();
+    } else {
+        lastInput.textContent = "";
+
+        if (userGuess < guessnum) {  //if not they get either of these messages
+            lowHi.textContent = "your guess is Too Low, take it up a notch";
+        } else if (userGuess > guessnum) {
+            lowHi.textContent = "your guess is Too High, take it down a notch";
+        }
+
+    }
+    trials++;
+    guessField.value = "";
+    guessField.focus();
+    input.style.boxShadow = '3px 3px 6px black';
+    lowHi.style.boxShadow = '3px 3px 6px black';
+    lastInput.style.boxShadow = '3px 3px 6px black';
+
+}
+
+    
+//check guess
+
+
+function 
+    
+
+
+
+
 
 </script>
 
